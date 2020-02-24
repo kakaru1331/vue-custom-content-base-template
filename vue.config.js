@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@', path.resolve(__dirname, 'client/src'))
+  },
   pages: {
     index: {
       entry: 'client/src/main.js',
