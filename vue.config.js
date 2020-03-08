@@ -13,5 +13,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'client/public')
+  },
+  configureWebpack: {
+    devtool: 'source-map'
   }
 }
