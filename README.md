@@ -1,7 +1,7 @@
 # vue-custom-content-base-template
 
 ## description
-This project structure was created inspired by vue-cli.  
+This project was created inspired by vue-cli.  
 Most of them are similar.  
 But some configs, structure is different.  
 Thx. :D
