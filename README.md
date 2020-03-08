@@ -1,4 +1,10 @@
-# hello-world
+# vue-custom-content-base-template
+
+## description
+This project structure was created inspired by vue-cli.  
+Most of them are similar.  
+But some configs, structure is different.  
+Thx. :D
 
 ## Project setup
 ```
@@ -29,6 +35,3 @@ npm run test:e2e
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
