@@ -1,4 +1,6 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   chainWebpack: config => {
@@ -14,7 +16,12 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'client/public')
   },
+  outputDir: 'client/dist',
   configureWebpack: {
+    plugins: [
+      new CopyWebpackPlugin([{ from: 'client/public', to: '.' }]),
+      new BundleAnalyzerPlugin()
+    ],
     devtool: 'source-map'
   }
 }
