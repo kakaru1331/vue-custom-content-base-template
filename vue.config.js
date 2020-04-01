@@ -6,6 +6,13 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias
       .set('@', path.resolve(__dirname, 'client/src'))
+
+    config.module
+      .rule('js')
+      .use('istanbul')
+      .loader('istanbul-instrumenter-loader')
+      .options({ esModules: true })
+      .before('babel-loader')
   },
   pages: {
     index: {
