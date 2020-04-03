@@ -1,7 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const currentEnv = process.env.NODE_ENV
 
@@ -64,8 +64,8 @@ module.exports = {
   outputDir: 'client/dist',
   configureWebpack: {
     plugins: [
-      new CopyWebpackPlugin([{ from: 'client/public', to: '.' }]),
-      new BundleAnalyzerPlugin()
+      new CopyWebpackPlugin([{ from: 'client/public', to: '.' }])
+      // new BundleAnalyzerPlugin()
     ],
     optimization: optimization,
     devtool: devtool
